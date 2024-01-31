@@ -18,7 +18,4 @@ public interface TaskService<T extends Task> {
     
     T get(List<T> tasks, int id);
     
-    /**
-     * Write the database of tasks to disk, upon exiting the application
-     */
 }

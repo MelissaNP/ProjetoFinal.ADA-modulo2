@@ -96,8 +96,6 @@ public class ViewerServiceImplementation implements ViewerService {
     
         System.out.println(status);
     }
-    
-    
   
     @Override
     public void editTask() {
@@ -114,7 +112,7 @@ public class ViewerServiceImplementation implements ViewerService {
         }
         
         // Input ID of the task to edit
-        System.out.print("\nEnter the ID of the task you want to edit: ");
+        System.out.print("\n Enter the ID of the task you want to edit: ");
         int id = sc.nextInt();
         sc.nextLine();
         
@@ -124,7 +122,6 @@ public class ViewerServiceImplementation implements ViewerService {
             System.out.print("Enter the new title of the task or press enter to leave unchanged: ");
             String newTitle = sc.nextLine();
             if (!newTitle.isEmpty()) {
-                // Update the task's title
                 String status = taskService.update(id, newTitle);
                 System.out.println("\n" + status);
             } else {
@@ -134,8 +131,6 @@ public class ViewerServiceImplementation implements ViewerService {
             System.out.println("\n Task with ID [" + id + "] not found.");
         }
     }
-    
-
     @Override
     public void removeTask() {
         System.out.println("\n===== Remove a Task =====\n");
@@ -156,12 +151,11 @@ public class ViewerServiceImplementation implements ViewerService {
         }
     }
     
-
     public void filterByCategory() {
         System.out.println("\n===== Filter by Category =====");
         System.out.println("Enter the category to filter (1 for HomeTask): ");
         int category = sc.nextInt();
-        sc.nextLine(); // Consume newline left-over
+        sc.nextLine();
         
         System.out.println("\n===== Tasks in Category " + getCategoryName(category) + " =====");
         for (Task task : tasks) {

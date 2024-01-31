@@ -16,7 +16,6 @@ public class TaskServiceImplementation implements TaskService<Task> {
         return tasks;
     }
     
-    
     @Override
     public String save(Task task) {
         int id = !tasks.isEmpty() ? tasks.get(tasks.size() - 1).getId() + 1 : 1;

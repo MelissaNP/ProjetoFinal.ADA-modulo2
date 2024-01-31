@@ -14,7 +14,6 @@ public interface ViewerService {
     
     void removeTask();
     
-    
     void filterByCategory();
     
 }
